@@ -1,0 +1,170 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CreativoAds</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.lang span {
+  margin-left: 10px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.lang span:hover {
+  opacity: 1;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hero img {
+  width: 260px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-15px);}
+  100% {transform: translateY(0px);}
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #00c6ff;
+  color: black;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.services {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  width: 250px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.contact {
+  text-align: center;
+  margin-top: 80px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  opacity: 0.5;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">CreativoAds</div>
+  <div class="lang">
+    <span onclick="setLang('en')">EN</span>
+    <span onclick="setLang('uz')">UZ</span>
+    <span onclick="setLang('ru')">RU</span>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="marketing">
+
+  <h1 id="title">We Create Ads That Sell 🚀</h1>
+  <p id="desc">High converting landing pages and ads</p>
+  <a href="#contact" class="btn" id="btn">Contact</a>
+</section>
+
+<section class="services">
+  <div class="card">
+    <h3 id="s1">Landing Page</h3>
+    <p id="s1d">Modern high-converting websites</p>
+  </div>
+
+  <div class="card">
+    <h3 id="s2">Advertising</h3>
+    <p id="s2d">Creative ads that sell</p>
+  </div>
+
+  <div class="card">
+    <h3 id="s3">Branding</h3>
+    <p id="s3d">Unique business identity</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 id="contactTitle">Contact</h2>
+  <p>Telegram: @creativoads</p>
+  <p>Phone: +998701651406</p>
+</section>
+
+<footer>
+  © 2026 CreativoAds
+</footer>
+
+<script>
+function setLang(lang) {
+  if(lang === 'uz') {
+    document.getElementById("title").innerText = "Sotadigan reklamalar yaratamiz 🚀";
+    document.getElementById("desc").innerText = "Kuchli landing page va reklama";
+    document.getElementById("btn").innerText = "Bog‘lanish";
+  }
+
+  if(lang === 'ru') {
+    document.getElementById("title").innerText = "Мы создаем рекламу, которая продаёт 🚀";
+    document.getElementById("desc").innerText = "Эффективные сайты и реклама";
+    document.getElementById("btn").innerText = "Связаться";
+  }
+
+  if(lang === 'en') {
+    location.reload();
+  }
+}
+</script>
+
+</body>
+</html>
